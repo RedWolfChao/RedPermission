@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="H:\Android\Git_Pro\RedPermissionNew\permissionlib\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="ea852387f7a709b15dddd83f8598a80066426d9c">
+        <dex dex="H:\Android\Git_Pro\RedPermissionNew\app\build\intermediates\pre-dexed\debug\classes_ff22ac0dd5db0c7510df9eaea1b33fc3f717dcce.jar" />
+    </item>
+
+</items>
