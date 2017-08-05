@@ -1,5 +1,6 @@
 # RedPermission
 Android 6.0 权限 Permission
+
 **用法 : **
 
  1. **需要继承PermissionActivity类**
@@ -65,8 +66,6 @@ Android 6.0 权限 Permission
                 Manifest.permission.READ_CONTACTS});
 ```
 **使用方式 : 暂时只能将代码Copy进项目中,JikPack暂时上传失败**
-
-**代码地址 : https://github.com/RedWolfChao/RedPermission**
 
 **注意事项 : **
 
