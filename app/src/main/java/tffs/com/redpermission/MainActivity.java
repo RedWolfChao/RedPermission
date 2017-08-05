@@ -7,6 +7,7 @@ import android.view.View;
 
 import tffs.com.permissionlib.PermissionActivity;
 import tffs.com.permissionlib.callback.PermissionCallBack;
+import tffs.com.permissionlib.constant.PermissionConstant;
 
 
 public class MainActivity extends PermissionActivity {
@@ -19,7 +20,11 @@ public class MainActivity extends PermissionActivity {
     }
 
     public void getPermission(View v) {
-        //  单权限申请
+        /**
+         *   组权限申请
+         *   @param callback为回调,检测是否某权限被用户同意或者是否被拒绝以及是否需要授权
+         *   @param String[] permissions 为要申请权限
+         */
         applyPermissionArray(new PermissionCallBack() {
             @Override
             public void onGroupPermissionSuccess(String permissionName) {
@@ -39,24 +44,28 @@ public class MainActivity extends PermissionActivity {
                 Manifest.permission.CAMERA,
                 Manifest.permission.ACCESS_FINE_LOCATION,
                 Manifest.permission.READ_CONTACTS});
-        //  组权限申请
-//        applyPermission(new PermissionCallBack() {
-//            @Override
-//            public void onCameraPermissionSuccess() {
-//                Log.i(TAG, "onCameraPermissionSuccess: ");
-//
-//            }
-//
-//            @Override
-//            public void onCameraPermissionFailure() {
-//                Log.i(TAG, "onCameraPermissionFailure: ");
-//
-//            }
-//
-//            @Override
-//            public void onNoNeedPermissionApply() {
-//                Log.i(TAG, "onNoNeedPermissionApply: ");
-//            }
-//        }, PermissionConstant.PERMISSION_CODE_CAMERA);
+        /**
+         *   单权限申请
+         *   @param callback为回调,检测是否被用户同意或者是否被拒绝以及是否需要授权
+         *   @param int permissionCode 为要申请权限代码 在PermissionConstant中有声明
+         */
+        applyPermission(new PermissionCallBack() {
+            @Override
+            public void onCameraPermissionSuccess() {
+                Log.i(TAG, "onCameraPermissionSuccess: ");
+
+            }
+
+            @Override
+            public void onCameraPermissionFailure() {
+                Log.i(TAG, "onCameraPermissionFailure: ");
+
+            }
+
+            @Override
+            public void onNoNeedPermissionApply() {
+                Log.i(TAG, "onNoNeedPermissionApply: ");
+            }
+        }, PermissionConstant.PERMISSION_CODE_CAMERA);
     }
 }
